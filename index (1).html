@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Joke Generator</title>
+  <link rel="stylesheet" href="joke.css">
+</head>
+<body>
+  <h1>Joke Generator</h1>
+  <p id="joke">Click the button for a joke.</p>
+  <button type="button" onclick="tellJoke()">Tell me a joke</button>
+
+  <script>
+    const jokes = [
+      "Why did the scarecrow win an award? Because he was outstanding in his field!",
+      "Why don't scientists trust atoms? Because they make up everything!",
+      "What do you call a bear with no teeth? A gummy bear!",
+      "Why did the bicycle fall over? It was two-tired!"
+    ];
+
+    function tellJoke() {
+      const index = Math.floor(Math.random() * jokes.length);
+      document.getElementById("joke").textContent = jokes[index];
+    }
+  </script>
+</body>
+</html>
